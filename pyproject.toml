@@ -1,0 +1,54 @@
+[project]
+name = "jax-pomdps"
+version = "0.1.0"
+description = "POMDPs in JAX, after Kaelbling, Littman & Cassandra (1998)."
+readme = "README.md"
+license = "LicenseRef-VibeCoded-AI-Slop-1.0"
+license-files = ["LICENSE"]
+authors = [{ name = "Misha Lvovsky" }]
+requires-python = ">=3.14"
+dependencies = [
+    "jax>=0.11.2",
+    "numpy>=2.5.3",
+]
+
+[build-system]
+requires = ["uv_build>=0.8.14,<0.9.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+]
+
+[tool.pyright]
+venvPath = "."
+venv = ".venv"
+include = ["src", "tests"]
+typeCheckingMode = "strict"
+reportUnknownMemberType = false
+reportUnknownArgumentType = false
+reportUnknownVariableType = false
+reportUnknownParameterType = false
+reportUnknownLambdaType = false
+reportMissingTypeStubs = false
+
+[tool.ruff]
+line-length = 88
+target-version = "py314"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "C4", "UP", "SIM", "D", "ANN", "RUF"]
+ignore = [
+    "F722",  # jaxtyping shape strings
+    "UP037",  # jaxtyping shape strings
+    "RUF001", "RUF002", "RUF003",  # Greek identifiers and math in docs
+    "D100", "D101", "D102", "D103", "D104", "D105", "D107",
+    "E741",
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["ANN"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "numpy"

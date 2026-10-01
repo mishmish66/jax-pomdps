@@ -1,0 +1,59 @@
+cff-version: 1.2.0
+message: >-
+  This software implements the POMDP formalism of Kaelbling, Littman and Cassandra (1998)
+  with an interface after Gym and Gymnasium. Please cite those works as well.
+title: "jax-pomdps: POMDPs in JAX"
+type: software
+authors:
+  - given-names: Misha
+    family-names: Lvovsky
+license-url: "https://gist.github.com/NicolasCARPi/3fd349ed1ed52ae6b835d5364cda4cd6"
+references:
+  - type: article
+    title: "Planning and acting in partially observable stochastic domains"
+    authors:
+      - {given-names: Leslie Pack, family-names: Kaelbling}
+      - {given-names: Michael L., family-names: Littman}
+      - {given-names: Anthony R., family-names: Cassandra}
+    journal: "Artificial Intelligence"
+    volume: 101
+    issue: "1-2"
+    start: 99
+    end: 134
+    year: 1998
+    doi: "10.1016/S0004-3702(98)00023-X"
+  - type: article
+    title: "Gymnasium: A Standard Interface for Reinforcement Learning Environments"
+    authors:
+      - {given-names: Mark, family-names: Towers}
+      - {given-names: Ariel, family-names: Kwiatkowski}
+      - {given-names: Jordan K., family-names: Terry}
+      - {given-names: John U., family-names: Balis}
+      - {given-names: Gianluca, family-names: De Cola}
+      - {given-names: Tristan, family-names: Deleu}
+      - {given-names: Manuel, family-names: Goulão}
+      - {given-names: Andreas, family-names: Kallinteris}
+      - {given-names: Markus, family-names: Krimmel}
+      - {given-names: Arjun, family-names: KG}
+      - {given-names: Rodrigo, family-names: Perez-Vicente}
+      - {given-names: Andrea, family-names: Pierré}
+      - {given-names: Sander, family-names: Schulhoff}
+      - {given-names: Jun Jet, family-names: Tai}
+      - {given-names: Hannah, family-names: Tan}
+      - {given-names: Omar G., family-names: Younis}
+    year: 2024
+    identifiers:
+      - {type: other, value: "arXiv:2407.17032"}
+  - type: article
+    title: "OpenAI Gym"
+    authors:
+      - {given-names: Greg, family-names: Brockman}
+      - {given-names: Vicki, family-names: Cheung}
+      - {given-names: Ludwig, family-names: Pettersson}
+      - {given-names: Jonas, family-names: Schneider}
+      - {given-names: John, family-names: Schulman}
+      - {given-names: Jie, family-names: Tang}
+      - {given-names: Wojciech, family-names: Zaremba}
+    year: 2016
+    identifiers:
+      - {type: other, value: "arXiv:1606.01540"}
